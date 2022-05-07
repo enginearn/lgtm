@@ -39,7 +39,7 @@ jobs:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           # command: pytest
-          command: l
+          command: |
             pip install --user -r requirements.lock
       - save_cache:
           paths:
@@ -53,7 +53,7 @@ jobs:
       - restore_cache:
           key: deps-{{ checksum "requirements.lock" }}
       - run:
-          command: l
+          command: |
            python -m unittest -v
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
