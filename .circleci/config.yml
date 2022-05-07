@@ -62,7 +62,7 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
   all:
     jobs:
-      - setup_dependencies
+      - setup-dependencies
       - test:
           requires:
-            - setup_dependencies
+            - setup-dependencies
