@@ -26,7 +26,7 @@ def save_with_message(fp, message):
     message_area_width = image_width * MAX_RATIO
     message_area_height = image_height * MAX_RATIO
 
-    # 1ポイントずつ小さくしながら咲いていきなフォントサイズを求める
+    # 1ポイントずつ小さくしながら最適なフォントサイズを求める
     for font_size in range(FONT_MAX_SIZE, FONT_MIN_SIZE, -1):
         font = ImageFont.truetype(FONT_NAME, font_size)
         
@@ -46,3 +46,4 @@ def save_with_message(fp, message):
     
     # 画像の保存
     image.save(OUTPUT_NAME, OUTPUT_FORMAT)
+    

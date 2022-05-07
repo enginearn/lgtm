@@ -1,4 +1,3 @@
-from importlib.resources import path
 import requests
 from io import BytesIO
 from pathlib import Path
