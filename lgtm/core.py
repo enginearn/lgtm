@@ -1,4 +1,6 @@
 import click
+from drawer import save_with_message
+from image_source import get_image
 
 @click.command()
 @click.option("--message", "-m", default="LGTM", show_default=True, help="画像に乗せる文字列")
@@ -8,8 +10,9 @@ def cli(keyword, message):
     lgtm(keyword, message)
 
     # 動作確認用
-    click.echo("lgtm")
+    # click.echo("lgtm")
 
 def lgtm(keyword, message):
     # ここにロジックを追加していく
-    pass
+    with get_image(keyword) as fp:
+        save_with_message(fp, message)
