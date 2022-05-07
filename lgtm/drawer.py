@@ -20,7 +20,7 @@ def save_with_message(fp, message):
     image = Image.open(fp)
     draw = ImageDraw.Draw(image)
 
-    # メッセージを描画できる領域サイズ
+    # メッセージを描画できる領域サイズを
     # タプルの要素ごとに計算する
     image_width, image_height = image.size
     message_area_width = image_width * MAX_RATIO
@@ -36,7 +36,7 @@ def save_with_message(fp, message):
         h = message_area_height - text_height
 
         # 幅、高さともに領域内に収まる値を採用
-        if w > 0 and 0 > h:
+        if w > 0 and h > 0:
             position = ((image_width - text_width) / 2, (image_height - text_height) / 2)
 
             # メッセージの描画
