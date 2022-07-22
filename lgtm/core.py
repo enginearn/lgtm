@@ -14,5 +14,6 @@ def cli(keyword, message):
 
 def lgtm(keyword, message):
     # ここにロジックを追加していく
+    # pass
     with get_image(keyword) as fp:
         save_with_message(fp, message)

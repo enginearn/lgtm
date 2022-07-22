@@ -36,7 +36,8 @@ class _LoremFlickr(RemoteImage):
         super().__init__(self._build_url(keyword))
 
     def _build_url(self, keyword):
-        return(f"{self.LOREM_FLICKR_URL}/" f"{self.WIDTH}/{self.HEIGHT}/{keyword}")
+        return(f"{self.LOREM_FLICKR_URL}/"
+               f"{self.WIDTH}/{self.HEIGHT}/{keyword}")
 
 KeywordImage = _LoremFlickr
 
