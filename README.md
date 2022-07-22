@@ -21,15 +21,29 @@
 ``` PowerShell
 git clone
 cd lgtm
-python main.py book
+python3 venv venv
+.\venv310\Scripts\activate
+(venv)python main.py book
 または
-pip install -e .
-lgtm book
+(venv)pip install -e .
+(venv)lgtm book # カレントディレクトリにoutput.pngが出力される
 ```
 
 GitHub repositoryから`pip install`は以下。
 
-`pip install git+https://github.com/enginearn/lgtm#egg=lgtm`
+``` PowerShell
+python3 venv venv
+.\venv310\Scripts\activate
+(venv)pip install git+https://github.com/enginearn/lgtm#egg=lgtm
+(venv)lgtm --help
+Usage: lgtm [OPTIONS] KEYWORD
+
+  "LGTM画像生成ツール
+
+Options:
+  -m, --message TEXT  画像に乗せる文字列  [default: LGTM]
+  --help              Show this message and exit.
+```
 
 ---
 

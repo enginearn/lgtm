@@ -5,6 +5,7 @@ setup(
     name = "lgtm",
     version = "1.0.0",
     packages = find_packages(exclude=("tests",)),
+    # package_data={'lgtm': ['data/*']},
     install_requires = [
         "Click",
         "Pillow",
